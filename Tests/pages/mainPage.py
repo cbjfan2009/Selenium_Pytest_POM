@@ -11,6 +11,8 @@ class MainPage():
         self.fgr_text_id = 'fgr'
         self.radius_text_id = 'wheelradius'
         self.calculate_button = '/html/body/div[2]/div[1]/form/input[7]'
+        self.navbar_about_link_text = 'About My RC Truck'
+        self.navbar_questionOfDay_link_text = 'Question of the Day'
 
     def enter_motorKV(self, kV):
         self.driver.find_element(By.ID, self.kv_text_id).clear()
@@ -38,3 +40,9 @@ class MainPage():
 
     def click_calculate(self):
         self.driver.find_element(By.XPATH, self.calculate_button).click()
+
+    def click_navbar_aboutPage_link(self):
+        self.driver.find_element(By.LINK_TEXT, self.navbar_about_link_text).click()
+
+    def click_navbar_questions_link(self):
+        self.driver.find_element(By.LINK_TEXT, self.navbar_questionOfDay_link_text).click()

@@ -9,4 +9,3 @@ class AboutPage():
 
     def click_castle_link(self):
         self.driver.find_element(By.LINK_TEXT, self.castle_link_linkText).click()
-
